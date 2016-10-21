@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+		
+<hibernate-configuration>
+    <session-factory>
+   	 	<property name="hibernate.connection.driver_class">org.mariadb.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://123.57.94.39:3306/ygfxy?useUnicode=true&amp;characterEncoding=UTF-8</property>
+		<property name="hibernate.connection.username">YGFXY</property>
+		<property name="hibernate.connection.password">xsx127</property>
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		
+		<mapping resource="org/com/xsx/Domain/SoftVersion.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>

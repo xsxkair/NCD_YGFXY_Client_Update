@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-10-21 14:39:30 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.com.xsx.Domain.SoftVersion" table="SOFTVERSION">
+        <id name="softname" type="java.lang.String">
+            <column name="SOFTNAME" />
+            <generator class="assigned" />
+        </id>
+        <property name="version" type="int">
+            <column name="VERSION" />
+        </property>
+        <property name="versiondesc" type="text">
+            <column name="VERSIONDESC"  length="1024"/>
+        </property>
+        <property name="MD5" type="java.lang.String">
+            <column name="MD5" />
+        </property>
+    </class>
+</hibernate-mapping>

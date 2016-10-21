@@ -3,6 +3,7 @@ package Application;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.com.xsx.Data.SoftVersionData;
 import org.com.xsx.DownService.DownService;
 
 import javafx.application.Application;
@@ -28,7 +29,13 @@ public class Lunch extends Application{
 	DownService downservice;
 	
 	public static void main(String[] args) {
-		launch(args);
+
+		if(args.length > 0){
+			System.out.println(args[0]);
+			SoftVersionData.GetInstance().setVersion(args[0]);
+			launch(args);
+		}
+		System.out.println("error");	
 	}
 	
 	@Override
